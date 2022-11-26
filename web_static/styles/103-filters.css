@@ -1,0 +1,146 @@
+.filters {
+	background-color: #FFFFFF;
+	height: 70px;
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.filters button {
+	font-size: 20px;
+	background-color: #FFF5F8;
+	color: #595959;
+	height: 50px;
+	width: 150px;
+	border: none;
+	border: 1px solid #DDDDDD;
+	border-radius: 40px;
+	margin-right: 15px;
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.filters button::before {
+	content: "";
+	height: 40px;
+	width: 40px;
+	margin-left: 3px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background-color: #ff395c;
+	background-image: url("../images/search.png");
+	display: inline-block;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.filters button:hover {
+	background-color: #ffe7eb;
+}
+
+.locations,
+.filters .amenities {
+	height: 100%;
+	width: 25%;
+	position: relative;
+}
+
+.locations {
+	border-right: 1px solid #DDDDDD;
+}
+
+.filter-title {
+	font-weight: 600;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	margin-left: 40px;
+}
+
+.filter-subtitle {
+	font-weight: 400;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 40px;
+}
+
+.locations:hover .popover,
+.filters .amenities:hover .popover {
+	display: block;
+}
+
+.popover {
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	list-style-type: none;
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 70px;
+	padding: 30px;
+	padding-top: 20px;
+	z-index: 1000;
+}
+
+.popover h2 {
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+.popover ul {
+	width: 100%;
+	list-style-type: none;
+	padding-inline-start: 15px;
+}
+
+.popover li {
+	padding: 3px;
+}
+
+
+/* For mobile*/
+@media only screen and (max-width: 768px) {
+	.filters {
+		border-radius: 40px;
+	}
+
+	.filters button {
+		height: 55px;
+		width: 55px;
+		border-radius: 100%;
+		margin-right: 5px;
+		background-color: #ff395c;
+		background-image: url("../images/search.png");
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+	.filters button::before {
+		display: none;
+	}
+
+	.filters button span {
+		display: none;
+	}
+
+	.filters button:hover {
+		background-color: #ff395c;
+		opacity: 0.8;
+	}
+
+	.locations,
+	.filters .amenities {
+		height: 100%;
+		width: 40%;
+		position: relative;
+	}
+}
