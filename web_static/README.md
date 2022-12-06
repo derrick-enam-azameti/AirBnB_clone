@@ -95,4 +95,4 @@ This static pages represent a static versions of the AirBnB Clone website. Each 
 <br />
 <br />
 ## Authors
-Kalkidan Betre
+Derrick Azameti
